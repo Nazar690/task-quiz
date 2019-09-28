@@ -1,0 +1,38 @@
+.content {
+    display: flex;
+}
+
+.task {
+    width: 65vw;
+    height: 100vh;
+    border-right: 2px solid black;  
+}
+
+.btn {
+    display: flex;
+}
+
+.progress-bar {
+    display: flex;
+    width: 35vw;
+    border-bottom: 1px solid black;
+}
+
+.block {
+    width: 34%;
+    border-right: 1px solid black; 
+}
+
+.answer {
+    margin: 20px;
+}
+
+.answer-form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+
+    span {
+        padding: 20px;
+    }
+}

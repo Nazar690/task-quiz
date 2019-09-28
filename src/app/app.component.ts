@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Test';
+  public toggle: boolean;
+
+  constructor() {
+    this.toggle = false;
+  }
+
+  toggleButton() {
+    this.toggle = !this.toggle;
+  }
 }
