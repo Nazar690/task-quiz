@@ -1,39 +1,24 @@
 <main class="content">
     <div class="task">
-        Question
+        <img src="{{question?.url}}" alt="{{question?.title}}">
     </div>
     <section class="answer-page">
-        <div class="progress-bar">
-            <div class="block">1</div>
-            <div class="block">2</div>
-            <div class="block">3</div>
+        <div class="progress-bar {{isCorrect ? 'correctly' : 'wrong'}}">
         </div>
         <div class="answer">
-            <p>1/3 Question 1</p>
-            <p>Question description</p>
+            <p>{{question?.id}}/3 {{question?.title}}</p>
+            <p>{{question?.description}}</p>
             <form [formGroup]="form" class="answer-form">
-                <label>
-                    <input type="radio" value='answer1' formControlName="gender">
-                    <span>Answer 1</span>
-                </label>
-                <label>
-                    <input type="radio" value='answer2' formControlName="gender">
-                    <span>Answer 2</span>
-                </label>
-                <label>
-                    <input type="radio" value='answer3' formControlName="gender">
-                    <span>Answer 3</span>
-                </label>
-                <label>
-                    <input type="radio" value='answer4' formControlName="gender">
-                    <span>Answer 4</span>
+                <label *ngFor="let option of question?.options">
+                    <input type="radio" value="{{option}}" formControlName="option">
+                    <span>{{option}}</span>
                 </label>
             </form>
         </div>
-        <div class="answer">{{answer}}</div>
+        <div *ngIf="submit" class="answer">Correct answer is: {{question?.answer}}</div>
         <div class="btn">
-            <button class="btn-submit" type="submit">Submit</button>
-            <button class="btn-next">Next</button>
+            <button class="btn-submit" (click)="submitOn()">Submit</button>
+            <button class="btn-next" (click)="nextQuestion()">Next</button>
         </div>
     </section>
 </main>

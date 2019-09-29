@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "title": "Question 1",
+      "description": "Angular is: ",
+      "options": ["server", "framework", "language", "library"],
+      "answer": "framework",
+      "url": "https://i.ytimg.com/vi/WAZTZUgeLhQ/maxresdefault.jpg"
+    },
+    {
+        "id": "2",
+        "title": "Question 2",
+        "description": "How many lifecycle hooks u know?",
+        "options": ["8", "6", "5", "7"],
+        "answer": "8",
+        "url": "https://i.ytimg.com/vi/DZGt8qw2b5g/maxresdefault.jpg"
+      },
+      {
+        "id": "3",
+        "title": "Question 3",
+        "description": "What is pipe?",
+        "options": ["Pipe is a data", "Pipe doesn't transform anything", "Pipe takes in data as input and transforms it to a desired output", "Pipe is server"],
+        "answer": "Pipe takes in data as input and transforms it to a desired output",
+        "url": "https://malcoded.com/static/c187742e46a08c61f2dff24c31a2142c/ba299/Angular-Logo-Pipe.png"
+      }
+]

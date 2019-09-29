@@ -9,9 +9,7 @@
     </div>
     <div class="questions" *ngIf="toggle">
         <ul class="question-list" (click)="toggleButton()">
-            <li class="question" routerLink="/question/1">Question 1</li>
-            <li class="question" routerLink="/question/2">Question 2</li>
-            <li class="question" routerLink="/question/3">Question 3</li>
+            <li class="question" (click)="goToQuestion(question)" *ngFor="let question of questions">{{question.title}}</li>
         </ul>
     </div>
 </div>
