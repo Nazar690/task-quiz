@@ -6,7 +6,7 @@
         <div class="progress-bar {{isCorrect ? 'correctly' : 'wrong'}}">
         </div>
         <div class="answer">
-            <p>{{question?.id}}/3 {{question?.title}}</p>
+            <p class="question-title">{{question?.id}}/3 {{question?.title}}</p>
             <p>{{question?.description}}</p>
             <form [formGroup]="form" class="answer-form">
                 <label *ngFor="let option of question?.options">
@@ -15,7 +15,7 @@
                 </label>
             </form>
         </div>
-        <div *ngIf="submit" class="answer">Correct answer is: {{question?.answer}}</div>
+        <div *ngIf="submit" class="correct-answer">Correct answer is: {{question?.answer}}</div>
         <div class="btn">
             <button class="btn-submit" (click)="submitOn()">Submit</button>
             <button class="btn-next" (click)="nextQuestion()">Next</button>
